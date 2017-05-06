@@ -8,7 +8,6 @@ mail($to,$subject,$message);
 
 require_once 'conn.php';
 require_once "email.class.php";
-require_once "sendmail.php";
 
 $name=$_POST["name"];
 error_log('name:'.$name, 3, 'info.log');
@@ -20,15 +19,11 @@ if ($name != "") {
 	$classchoice=$_POST["classchoice"];
 
 
-//error_log('tel:'.$tel."\r\n", 3, 'info.log');
-//error_log('school:'.$school."\r\n", 3, 'info.log');
-//error_log('age:'.$age."\r\n", 3, 'info.log');
-//error_log('classchoice:'.$classchoice."\r\n", 3, 'info.log');
+error_log('tel:'.$tel."\r\n", 3, 'info.log');
+error_log('school:'.$school."\r\n", 3, 'info.log');
+error_log('age:'.$age."\r\n", 3, 'info.log');
+error_log('classchoice:'.$classchoice."\r\n", 3, 'info.log');
 
-error_log(print_r($tel, true));
-error_log(print_r($school, true));
-error_log(print_r($age, true));
-error_log(print_r($classchoice, true));
 
 	//写入数据
 	$query = "INSERT INTO studentlist (
