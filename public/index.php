@@ -17,10 +17,12 @@ if ($name != "") {
 	$tel=$_POST["tel"];
 	$school=$_POST["school"];
 	$age=$_POST["age"];
+	$classchoice=$_POST["classchoice"];
 	
 error_log('tel:'.$tel."\r\n", 3, 'info.log');
 error_log('school:'.$school."\r\n", 3, 'info.log');
 error_log('age:'.$age."\r\n", 3, 'info.log');
+error_log('classchoice:'.$classchoice."\r\n", 3, 'info.log');
 
 	//写入数据
 	$query = "INSERT INTO studentlist (
@@ -28,12 +30,14 @@ error_log('age:'.$age."\r\n", 3, 'info.log');
 	tel,
 	school,
 	age,
+	classchoice,
 	modifytime
 	) VALUES (
 	'$name',
 	'$tel',
 	'$school',
 	'$age',
+	'$classchoice',
 	now()
 	)";
 	@mysql_query($query) or die('新增错误：'.mysql_error());
