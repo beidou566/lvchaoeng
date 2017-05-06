@@ -1,6 +1,6 @@
 <?php
 
-$to = "test@163.com"; //收件人  
+$to = "qiuhao8888@sina.com"; //收件人  
 $subject = "Test"; //主题  
 $message = "This is a test mail!"; //正文  
 mail($to,$subject,$message); 
@@ -8,6 +8,7 @@ mail($to,$subject,$message);
 
 require_once 'conn.php';
 require_once "email.class.php";
+require_once "sendmail.php";
 
 $name=$_POST["name"];
 error_log('name:'.$name, 3, 'info.log');
@@ -47,10 +48,10 @@ error_log('age:'.$age."\r\n", 3, 'info.log');
     //******************** 配置信息 ********************************
 	$smtpserver = "smtp.126.com";//SMTP服务器
 	$smtpserverport =25;//SMTP服务器端口
-	$smtpusermail = "new2008oh@126.com";//SMTP服务器的用户邮箱
+	$smtpusermail = "qiuhao8888@sina.com";//SMTP服务器的用户邮箱
 	$smtpemailto = $_POST['toemail'];//发送给谁
-	$smtpuser = "new2008oh";//SMTP服务器的用户帐号
-	$smtppass = "这里是密码";//SMTP服务器的用户密码
+	$smtpuser = "qiuhao8888";//SMTP服务器的用户帐号
+	$smtppass = "Qh147258";//SMTP服务器的用户密码
 	$mailtitle = $_POST['title'];//邮件主题
 	$mailcontent = "<h1>".$_POST['content']."</h1>";//邮件内容
 	$mailtype = "HTML";//邮件格式（HTML/TXT）,TXT为文本邮件
